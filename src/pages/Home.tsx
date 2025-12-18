@@ -122,7 +122,7 @@ export default function Home() {
       {/* Secondary Hero Image Section */}
       <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
         <img
-          src={getStorageUrl('Hero 3.png')}
+          src={getStorageUrl('Hero 3.jpg')}
           alt="Cherry Bay collection"
           className="absolute inset-0 w-full h-full object-cover object-top"
         />

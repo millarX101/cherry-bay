@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  :root {
+    --background: 40 33% 99%;
+    --foreground: 20 8% 16%;
+
+    --card: 40 33% 99%;
+    --card-foreground: 20 8% 16%;
+
+    --popover: 40 33% 99%;
+    --popover-foreground: 20 8% 16%;
+
+    --primary: 351 76% 56%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 188 53% 46%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 35 40% 94%;
+    --muted-foreground: 20 8% 45%;
+
+    --accent: 35 40% 90%;
+    --accent-foreground: 20 8% 16%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 30% 88%;
+    --input: 35 30% 88%;
+    --ring: 351 76% 56%;
+
+    --radius: 0.5rem;
+
+    /* Cherry Bay Brand Colors */
+    --cherry-50: #FFF5F5;
+    --cherry-100: #FFE8E8;
+    --cherry-200: #FFCCD0;
+    --cherry-300: #FFA3AA;
+    --cherry-400: #FF7080;
+    --cherry-500: #E63950;
+    --cherry-600: #CC2D42;
+    --cherry-700: #A82238;
+    --cherry-800: #8A1C2E;
+    --cherry-900: #6B1524;
+
+    --bay-50: #F0FAFB;
+    --bay-100: #D0F0F4;
+    --bay-200: #A0E0EA;
+    --bay-300: #60C8D8;
+    --bay-400: #30A8BC;
+    --bay-500: #1D8A9C;
+    --bay-600: #186E7D;
+    --bay-700: #145660;
+    --bay-800: #0F3E46;
+    --bay-900: #0A282E;
+
+    --sand-50: #FEFDFB;
+    --sand-100: #FDF8F0;
+    --sand-200: #F8EDDD;
+    --sand-300: #F0DFC5;
+    --sand-400: #E5CCA5;
+    --sand-500: #D4B68A;
+    --sand-600: #B89A6E;
+    --sand-700: #9A7D55;
+    --sand-800: #7A6344;
+    --sand-900: #5C4A33;
+
+    --cream: #FFFDF8;
+    --charcoal: #2D2926;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: var(--cream);
+    color: var(--charcoal);
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8EDDD;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E5CCA5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4B68A;
+}
+
+/* Keyframe animations */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 20s linear infinite;
+}

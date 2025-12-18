@@ -23,42 +23,46 @@ export default function About() {
         </section>
 
         {/* Founder Section */}
-        <section className="section-padding" id="story">
+        <section className="py-16 md:py-24" id="story">
           <div className="container-wide">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="aspect-square rounded-2xl overflow-hidden bg-sand-100">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-sand-100 shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&h=800&fit=crop"
-                  alt="Cherry Bay founder"
+                  src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800&h=1000&fit=crop&crop=top"
+                  alt="Addi, founder of Cherry Bay"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div>
-                <h2 className="heading-2 text-charcoal">Meet the Founder</h2>
-                <div className="mt-6 space-y-4 text-sand-700">
+                <span className="text-cherry-500 font-medium text-sm uppercase tracking-wider">Meet the Founder</span>
+                <h2 className="heading-2 text-charcoal mt-2">Hi, I'm Addi</h2>
+                <div className="mt-6 space-y-5 text-sand-700 text-lg leading-relaxed">
                   <p>
-                    Hi! I'm the creator behind Cherry Bay. As a young designer with a passion
-                    for fashion and a love for the beach lifestyle, I wanted to create swimwear
-                    that makes every woman feel beautiful, confident, and bold.
+                    I've always loved the beach, feeling healthy, being in the sun and enjoying life outdoors.
+                    But finding swimwear that actually felt right for me — and girls my age — was surprisingly hard.
+                    Everything seemed to be designed for kids or much older women, with a huge blind spot in between.
+                  </p>
+                  <p className="font-medium text-charcoal">
+                    Cherry Bay started as a way to change that.
                   </p>
                   <p>
-                    Growing up by the coast, I spent countless summers by the water. I noticed
-                    that finding swimwear that was both stylish and comfortable was harder than
-                    it should be. That's when Cherry Bay was born.
+                    I'm naturally pretty shy, but designing swimwear gave me a way to express my creative, cheeky side.
+                    I wanted to create pieces that help young women feel confident, comfortable and themselves —
+                    without having to fit into someone else's idea of what swimwear should be.
                   </p>
                   <p>
-                    Every piece in our collection is designed with love here in Australia,
-                    using sustainable materials and ethical practices. Because looking good
-                    should feel good too.
+                    Every Cherry Bay piece is made for movement, confidence and fun. It's about feeling good in your
+                    own skin, looking great, and making the most of time spent in the sun with friends.
                   </p>
-                  <p>
-                    Thank you for being part of our journey. I hope our swimwear brings you
-                    as much joy as it brings me to create it.
+                  <p className="italic text-sand-600">
+                    Cherry Bay is my way of turning a gap in the market into something positive — swimwear for
+                    the younger generation that actually feels like us.
                   </p>
                 </div>
-                <p className="mt-6 font-display text-2xl text-cherry-500">
-                  - With love, The Cherry Bay Team
+                <p className="mt-8 font-display text-2xl text-cherry-500">
+                  — Addi
                 </p>
+                <p className="text-sm text-sand-500 mt-1">Founder, Cherry Bay</p>
               </div>
             </div>
           </div>

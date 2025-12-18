@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { Menu, Search, Heart, ShoppingBag, User } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle } from '@/components/ui/sheet'
+import { LogoInline } from '@/components/ui/Logo'
 import { cn } from '@/lib/utils'
 import { useCart } from '@/context/CartContext'
 
@@ -49,8 +50,8 @@ export function Header() {
               <SheetContent side="left" className="w-full max-w-xs">
                 <SheetHeader>
                   <SheetTitle className="text-left">
-                    <Link to="/" className="text-2xl font-display font-bold text-cherry-500">
-                      Cherry Bay
+                    <Link to="/">
+                      <LogoInline />
                     </Link>
                   </SheetTitle>
                 </SheetHeader>
@@ -99,9 +100,7 @@ export function Header() {
           {/* Logo */}
           <div className="flex lg:flex-1">
             <Link to="/" className="-m-1.5 p-1.5">
-              <span className="text-2xl md:text-3xl font-display font-bold text-cherry-500 tracking-tight">
-                Cherry Bay
-              </span>
+              <LogoInline />
             </Link>
           </div>
 

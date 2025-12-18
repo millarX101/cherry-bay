@@ -24,8 +24,8 @@ export const demoProducts: Product[] = [
     isSet: false,
     matchingProducts: ['2'],
     images: [
-      'https://picsum.photos/seed/coral-top-1/600/800',
-      'https://picsum.photos/seed/coral-top-2/600/800',
+      'https://images.unsplash.com/photo-1570976447640-ac859083963f?w=600&h=800&fit=crop&crop=top',
+      'https://images.unsplash.com/photo-1529635612411-79d8e246e79c?w=600&h=800&fit=crop&crop=top',
     ],
     videoUrl: undefined,
     inStock: true,
@@ -63,7 +63,7 @@ export const demoProducts: Product[] = [
     isSet: false,
     matchingProducts: ['1'],
     images: [
-      'https://picsum.photos/seed/coral-bottom-1/600/800',
+      'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600&h=800&fit=crop&crop=top',
     ],
     videoUrl: undefined,
     inStock: true,
@@ -101,7 +101,7 @@ export const demoProducts: Product[] = [
     isSet: false,
     matchingProducts: [],
     images: [
-      'https://picsum.photos/seed/ocean-onepiece-1/600/800',
+      'https://images.unsplash.com/photo-1519722417352-7d6959729417?w=600&h=800&fit=crop&crop=top',
     ],
     videoUrl: undefined,
     inStock: true,
@@ -139,7 +139,7 @@ export const demoProducts: Product[] = [
     isSet: false,
     matchingProducts: ['5'],
     images: [
-      'https://picsum.photos/seed/cherry-bandeau-1/600/800',
+      'https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=600&h=800&fit=crop&crop=top',
     ],
     videoUrl: undefined,
     inStock: true,
@@ -177,7 +177,7 @@ export const demoProducts: Product[] = [
     isSet: false,
     matchingProducts: ['4'],
     images: [
-      'https://picsum.photos/seed/cherry-cheeky-1/600/800',
+      'https://images.unsplash.com/photo-1525299374597-911581e1bdef?w=600&h=800&fit=crop&crop=top',
     ],
     videoUrl: undefined,
     inStock: true,
@@ -215,7 +215,7 @@ export const demoProducts: Product[] = [
     isSet: false,
     matchingProducts: ['7'],
     images: [
-      'https://picsum.photos/seed/sandy-halter-1/600/800',
+      'https://images.unsplash.com/photo-1529635612411-79d8e246e79c?w=600&h=800&fit=crop&crop=top',
     ],
     videoUrl: undefined,
     inStock: true,
@@ -253,7 +253,7 @@ export const demoProducts: Product[] = [
     isSet: false,
     matchingProducts: ['6'],
     images: [
-      'https://picsum.photos/seed/sandy-midrise-1/600/800',
+      'https://images.unsplash.com/photo-1502163140606-888448ae8cfe?w=600&h=800&fit=crop&crop=top',
     ],
     videoUrl: undefined,
     inStock: true,
@@ -291,7 +291,7 @@ export const demoProducts: Product[] = [
     isSet: false,
     matchingProducts: [],
     images: [
-      'https://picsum.photos/seed/tropical-coverup-1/600/800',
+      'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600&h=800&fit=crop&crop=top',
     ],
     videoUrl: undefined,
     inStock: true,

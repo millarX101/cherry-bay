@@ -28,6 +28,13 @@ export default function Home() {
           throw error
         }
       } else {
+        // Send notification to ben@millarX.com.au
+        fetch('/api/notify-signup', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        }).catch(() => {}) // Fire and forget - don't block on notification
+
         setStatus('success')
         setMessage("You're in! We'll be in touch soon.")
         setEmail('')

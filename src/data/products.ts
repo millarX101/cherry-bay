@@ -1,8 +1,5 @@
 import type { Product } from '@/types'
 
-// Placeholder for coming soon - products don't have real images yet
-const COMING_SOON_PLACEHOLDER = '/placeholder-coming-soon.svg'
-
 export const demoProducts: Product[] = [
   {
     id: '1',

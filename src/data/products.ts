@@ -24,8 +24,8 @@ export const demoProducts: Product[] = [
     isSet: false,
     matchingProducts: ['2'],
     images: [
-      'https://images.unsplash.com/photo-1570976447640-ac859083963f?w=600&h=800&fit=crop',
-      'https://images.unsplash.com/photo-1594498653385-d5172c532c00?w=600&h=800&fit=crop',
+      'https://picsum.photos/seed/coral-top-1/600/800',
+      'https://picsum.photos/seed/coral-top-2/600/800',
     ],
     videoUrl: undefined,
     inStock: true,
@@ -63,7 +63,7 @@ export const demoProducts: Product[] = [
     isSet: false,
     matchingProducts: ['1'],
     images: [
-      'https://images.unsplash.com/photo-1559097086-3c2abc8f4319?w=600&h=800&fit=crop',
+      'https://picsum.photos/seed/coral-bottom-1/600/800',
     ],
     videoUrl: undefined,
     inStock: true,
@@ -101,7 +101,7 @@ export const demoProducts: Product[] = [
     isSet: false,
     matchingProducts: [],
     images: [
-      'https://images.unsplash.com/photo-1520006403909-838d6b92c22e?w=600&h=800&fit=crop',
+      'https://picsum.photos/seed/ocean-onepiece-1/600/800',
     ],
     videoUrl: undefined,
     inStock: true,
@@ -139,7 +139,7 @@ export const demoProducts: Product[] = [
     isSet: false,
     matchingProducts: ['5'],
     images: [
-      'https://images.unsplash.com/photo-1594498653385-d5172c532c00?w=600&h=800&fit=crop',
+      'https://picsum.photos/seed/cherry-bandeau-1/600/800',
     ],
     videoUrl: undefined,
     inStock: true,
@@ -177,7 +177,7 @@ export const demoProducts: Product[] = [
     isSet: false,
     matchingProducts: ['4'],
     images: [
-      'https://images.unsplash.com/photo-1559097086-3c2abc8f4319?w=600&h=800&fit=crop',
+      'https://picsum.photos/seed/cherry-cheeky-1/600/800',
     ],
     videoUrl: undefined,
     inStock: true,
@@ -215,7 +215,7 @@ export const demoProducts: Product[] = [
     isSet: false,
     matchingProducts: ['7'],
     images: [
-      'https://images.unsplash.com/photo-1570976447640-ac859083963f?w=600&h=800&fit=crop',
+      'https://picsum.photos/seed/sandy-halter-1/600/800',
     ],
     videoUrl: undefined,
     inStock: true,
@@ -253,7 +253,7 @@ export const demoProducts: Product[] = [
     isSet: false,
     matchingProducts: ['6'],
     images: [
-      'https://images.unsplash.com/photo-1559097086-3c2abc8f4319?w=600&h=800&fit=crop',
+      'https://picsum.photos/seed/sandy-midrise-1/600/800',
     ],
     videoUrl: undefined,
     inStock: true,
@@ -291,7 +291,7 @@ export const demoProducts: Product[] = [
     isSet: false,
     matchingProducts: [],
     images: [
-      'https://images.unsplash.com/photo-1520006403909-838d6b92c22e?w=600&h=800&fit=crop',
+      'https://picsum.photos/seed/tropical-coverup-1/600/800',
     ],
     videoUrl: undefined,
     inStock: true,

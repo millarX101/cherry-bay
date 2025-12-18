@@ -46,7 +46,19 @@ export default async (request: Request, context: Context) => {
       });
 
       if (!response.ok) {
-        console.error("Failed to send notification email:", await response.text());
+        const errorText = await response.text();
+        console.error("Failed to send notification email:", response.status, errorText);
+        // Return error details for debugging
+        return new Response(JSON.stringify({
+          success: false,
+          emailError: `Resend API error: ${response.status}`,
+          details: errorText
+        }), {
+          status: 200, // Still return 200 so signup succeeds
+          headers: { "Content-Type": "application/json" },
+        });
+      } else {
+        console.log("Notification email sent successfully");
       }
     } else {
       console.log("RESEND_API_KEY not configured - skipping email notification");

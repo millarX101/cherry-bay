@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Heart, ImageOff } from 'lucide-react'
+import { Heart, Sparkles } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { cn, formatPrice, getDiscountPercentage } from '@/lib/utils'
@@ -18,6 +18,9 @@ export function ProductCard({ product, className }: ProductCardProps) {
     ? getDiscountPercentage(product.comparePrice!, product.price)
     : 0
 
+  // Check if product has no images or image failed to load
+  const showComingSoon = !product.images.length || imageError
+
   return (
     <div className={cn('group relative', className)}>
       {/* Image Container */}
@@ -25,10 +28,11 @@ export function ProductCard({ product, className }: ProductCardProps) {
         to={`/product/${product.slug}`}
         className="block aspect-[3/4] overflow-hidden rounded-lg bg-gradient-to-br from-sand-100 to-sand-200"
       >
-        {imageError ? (
-          <div className="h-full w-full flex flex-col items-center justify-center text-sand-400">
-            <ImageOff className="h-12 w-12 mb-2" />
-            <span className="text-sm">Image coming soon</span>
+        {showComingSoon ? (
+          <div className="h-full w-full flex flex-col items-center justify-center bg-gradient-to-br from-cherry-50 via-sand-50 to-bay-50">
+            <Sparkles className="h-10 w-10 text-cherry-400 mb-3" />
+            <span className="text-sm font-medium text-charcoal">Coming Soon</span>
+            <span className="text-xs text-sand-500 mt-1">Stay tuned</span>
           </div>
         ) : (
           <>
@@ -117,20 +121,22 @@ export function ProductCard({ product, className }: ProductCardProps) {
         </div>
       </div>
 
-      {/* Quick Add - Shows on hover */}
-      <div className="absolute bottom-[120px] left-0 right-0 px-3 opacity-0 translate-y-2 transition-all group-hover:opacity-100 group-hover:translate-y-0">
-        <Button
-          className="w-full"
-          size="sm"
-          disabled={!product.inStock}
-          onClick={(e) => {
-            e.preventDefault()
-            // TODO: Open quick add modal or add to cart
-          }}
-        >
-          {product.inStock ? 'Quick Add' : 'Sold Out'}
-        </Button>
-      </div>
+      {/* Quick Add - Shows on hover (only if has images) */}
+      {!showComingSoon && (
+        <div className="absolute bottom-[120px] left-0 right-0 px-3 opacity-0 translate-y-2 transition-all group-hover:opacity-100 group-hover:translate-y-0">
+          <Button
+            className="w-full"
+            size="sm"
+            disabled={!product.inStock}
+            onClick={(e) => {
+              e.preventDefault()
+              // TODO: Open quick add modal or add to cart
+            }}
+          >
+            {product.inStock ? 'Quick Add' : 'Sold Out'}
+          </Button>
+        </div>
+      )}
     </div>
   )
 }

@@ -186,22 +186,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Teaser */}
-      <section className="section-padding bg-cherry-500 text-white">
+      {/* About Teaser - Meet Addi */}
+      <section className="py-16 md:py-20 bg-cherry-500 text-white">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-3xl md:text-4xl font-display font-semibold">
-                Meet the Founder
+              <span className="text-cherry-200 font-medium text-sm uppercase tracking-wider">Meet the Founder</span>
+              <h2 className="text-3xl md:text-4xl font-display font-semibold mt-2">
+                Hi, I'm Addi
               </h2>
               <p className="mt-6 text-cherry-100 text-lg leading-relaxed">
-                Cherry Bay was born from a love of summer, confidence, and self-expression.
-                As a young designer with a passion for fashion, I wanted to create swimwear
-                that makes every woman feel beautiful and bold.
-              </p>
-              <p className="mt-4 text-cherry-100 text-lg leading-relaxed">
-                Every piece is designed with love in Australia, using sustainable materials
-                and ethical practices. Because looking good should feel good too.
+                Finding swimwear that felt right for girls my age was surprisingly hard — everything
+                was designed for kids or much older women. Cherry Bay is my way of changing that.
+                Swimwear made for movement, confidence and fun.
               </p>
               <Button
                 asChild
@@ -209,14 +206,14 @@ export default function Home() {
                 size="lg"
                 className="mt-8 border-white text-white hover:bg-white hover:text-cherry-500"
               >
-                <Link to="/about">Our Story</Link>
+                <Link to="/about">Read My Story</Link>
               </Button>
             </div>
             <div className="order-1 lg:order-2">
-              <div className="aspect-square rounded-2xl overflow-hidden">
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&h=600&fit=crop"
-                  alt="Cherry Bay founder"
+                  src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&h=750&fit=crop&crop=top"
+                  alt="Addi, founder of Cherry Bay"
                   className="w-full h-full object-cover"
                 />
               </div>

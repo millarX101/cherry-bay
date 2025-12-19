@@ -31,7 +31,7 @@ export default async (request: Request, context: Context) => {
           Authorization: `Bearer ${RESEND_API_KEY}`,
         },
         body: JSON.stringify({
-          from: "Cherry Bay <onboarding@resend.dev>",
+          from: "Cherry Bay <hello@cherrybay.com.au>",
           to: [NOTIFY_EMAIL],
           subject: "New Cherry Bay Signup!",
           html: `

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Heart, Sparkles } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { ComingSoonModal } from '@/components/product/ComingSoonModal'
 import { cn, formatPrice, getDiscountPercentage } from '@/lib/utils'
 import type { Product } from '@/types'
 
@@ -13,6 +14,7 @@ interface ProductCardProps {
 
 export function ProductCard({ product, className }: ProductCardProps) {
   const [imageError, setImageError] = useState(false)
+  const [showModal, setShowModal] = useState(false)
   const hasDiscount = product.comparePrice && product.comparePrice > product.price
   const discountPercentage = hasDiscount
     ? getDiscountPercentage(product.comparePrice!, product.price)
@@ -21,12 +23,27 @@ export function ProductCard({ product, className }: ProductCardProps) {
   // Check if product has no images or image failed to load
   const showComingSoon = !product.images.length || imageError
 
+  const handleClick = (e: React.MouseEvent) => {
+    if (showComingSoon) {
+      e.preventDefault()
+      setShowModal(true)
+    }
+  }
+
   return (
     <div className={cn('group relative', className)}>
+      {/* Coming Soon Modal */}
+      <ComingSoonModal
+        product={product}
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
+      />
+
       {/* Image Container */}
       <Link
-        to={`/product/${product.slug}`}
-        className="block aspect-[3/4] overflow-hidden rounded-lg bg-gradient-to-br from-sand-100 to-sand-200"
+        to={showComingSoon ? '#' : `/product/${product.slug}`}
+        onClick={handleClick}
+        className="block aspect-[3/4] overflow-hidden rounded-lg bg-gradient-to-br from-sand-100 to-sand-200 cursor-pointer"
       >
         {showComingSoon ? (
           <div className="h-full w-full flex flex-col items-center justify-center bg-gradient-to-br from-cherry-50 via-sand-50 to-bay-50">
@@ -83,7 +100,10 @@ export function ProductCard({ product, className }: ProductCardProps) {
 
       {/* Product Info */}
       <div className="mt-4">
-        <Link to={`/product/${product.slug}`}>
+        <Link
+          to={showComingSoon ? '#' : `/product/${product.slug}`}
+          onClick={handleClick}
+        >
           <h3 className="text-sm font-medium text-charcoal group-hover:text-cherry-500 transition-colors line-clamp-1">
             {product.name}
           </h3>

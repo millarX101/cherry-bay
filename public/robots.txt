@@ -1,0 +1,6 @@
+# Cherry Bay Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cherrybay.com.au/sitemap.xml

@@ -1,6 +1,6 @@
 import type { Context } from "@netlify/edge-functions";
 
-const NOTIFY_EMAIL = "ben@millarX.com.au";
+const NOTIFY_EMAIL = "ben@millarx.com.au";
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
 
 export default async (request: Request, context: Context) => {
